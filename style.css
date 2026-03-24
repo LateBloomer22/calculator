@@ -16,3 +16,13 @@ body {
     align-items: center;
     justify-content: space-between;
 }
+
+.calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.calculator button {
+    padding: 10px 20px;
+}
