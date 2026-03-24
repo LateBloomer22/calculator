@@ -14,15 +14,33 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    position: relative;
+    gap: 10px;
+    /* justify-content: space-between; */
 }
 
 .calculator {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
 }
+
+.display {
+    grid-column: 1/5;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border: 1px dotted grey;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
 
 .calculator button {
     padding: 10px 20px;
+}
+
+.footer {
+    position:absolute;
+    bottom: 0%;
 }
