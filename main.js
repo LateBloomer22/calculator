@@ -1,5 +1,4 @@
 let operator = "";
-let result;
 let current = "";
 let previous = "";
 let previousInputTillNow = "";
@@ -87,6 +86,17 @@ function calculate(prev, operator, curr) {
 
 // function to produce result
 function calculationOutput (){
-    result = calculate(previous,operator,current);
-    currentInputOutput.textContent = result;
+    previousInputTillNow = `${previous} ${operator} ${current} = `;
+    previousInputDisplay();
+    current = String(calculate(previous,operator,current));
+    currentInputOutput.textContent = current;
+}
+
+function reset() {
+    operator = "";
+    current = "";
+    previous = "";
+    previousInputTillNow = "";
+    previousInputDisplay();
+    currentInputDisplay();
 }
