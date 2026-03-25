@@ -64,4 +64,9 @@ body {
 .footer {
     position:absolute;
     bottom: 0%;
+    background-color: grey;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    color: white;
 }
