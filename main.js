@@ -11,7 +11,32 @@ window.onload = currentInputDisplay();
 
 // Function to get the operator input by the user
 function getOperator(button) {
-    operator = button.value;
+    // Case 1: Both values empty : Do nothing
+    if (current == "" && previous == "") {
+        return;
+    } 
+    // Case 2: Previous empty and current non-empty : Assign current to previous, empty current, and output previous input till now
+    else if (previous == "" && current != ""){
+        operator = button.value;
+        previous = current;
+        current = "";
+        previousInputTillNow = `${previous} ${operator}`;
+        previousInputDisplay();
+        currentInputDisplay();
+    } 
+    else if (previous != "" && current != "") {
+        previous = String(calculate(previous, operator, current));
+        current = "";
+        operator = button.value;
+        previousInputTillNow = `${previous} ${operator}`;
+        previousInputDisplay();
+        currentInputDisplay();
+    } 
+    else if (previous != "" && current == "") {
+        operator = button.value;
+        previousInputTillNow = `${previous} ${operator}`;
+        previousInputDisplay();
+    }   
 }
 
 // Function to display the equation thus far
