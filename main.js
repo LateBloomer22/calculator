@@ -1,10 +1,13 @@
 let operator = "";
-let result = 0;
+let result;
 let current = "";
 let previous = "";
 let previousInputTillNow = "";
 let previousInputOutput = document.getElementById("previousInput");
 let currentInputOutput = document.getElementById("currentInput"); 
+
+// Function to show 0 in display on pageload
+window.onload = currentInputDisplay();
 
 // Function to get the operator input by the user
 function getOperator(button) {
@@ -27,6 +30,11 @@ function currentInputDisplay(){
     
 } 
 
+// Function to create the input number
+function input(button) {
+    current += button.textContent;
+    currentInputDisplay();
+}
 
 // Function to delete the last data entry
 function del() {
@@ -53,4 +61,10 @@ function calculate(prev, operator, curr) {
             return prev / curr ;
         }
     }
+}
+
+// function to produce result
+function calculationOutput (){
+    result = calculate(previous,operator,current);
+    currentInputOutput.textContent = result;
 }
