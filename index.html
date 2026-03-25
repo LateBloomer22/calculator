@@ -12,13 +12,13 @@
         <h1>My Calculator</h1>
         <div class="calculator">
             <div class="display">
-                <div class="runningDisplay"></div>
-                <div class="inputDisplay">0</div>
+                <div class="runningDisplay" id="previousInput"></div>
+                <div class="inputDisplay" id="currentInput">0</div>
             </div>
             <!-- TryOnclick property this time -->
              <div class="aux">
                 <button  onclick="reset()" type="button" class="reset">Clear</button>
-                <button  onclick="" type="button" class="delete">Delete</button>
+                <button  onclick="del()" type="button" class="delete">Delete</button>
             </div>
              <div class="numbers">
                 <button  onclick="" type="button" class="input">1</button>
