@@ -73,17 +73,26 @@ body {
     padding: 15px;
     font-size: 1.5rem;
     border-radius: 5px;
-    color: white;
+    color: rgb(0, 0, 0);
     font-weight: bold;
 }
 
-.input{
-    background-color: rgb(126, 126, 126);
+.calculator button:hover {
+    cursor: pointer;
+    background-image: linear-gradient(rgba(59, 59, 59, 0.2) 0 0);
+} 
+
+.calculator button:active {
+    background-image: linear-gradient(rgba(59, 59, 59, 0.6) 0 0);
+}
+
+.input {
+    background-color: rgb(235, 235, 235);
+
 }
 
 .reset, .equal, .delete {
     background-color: rgba(243, 5, 5, 0.5);
-    color: black;
 }
 
 .operator {
