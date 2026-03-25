@@ -4,6 +4,7 @@ let previous = "";
 let previousInputTillNow = "";
 let previousInputOutput = document.getElementById("previousInput");
 let currentInputOutput = document.getElementById("currentInput"); 
+let isResult = false;
 
 // Function to show 0 in display on pageload
 window.onload = currentInputDisplay();
@@ -57,15 +58,28 @@ function input(button) {
     currentInputDisplay();
 }
 
-// Function to delete the last data entry
+// Function to operate delete button 
 function del() {
+    if (isResult == false) {
+        lastDel();
+    } else {
+        previousInputTillNow = "";
+        previousInputDisplay();
+        previous = "";
+        lastDel();
+        isResult = false;
+    }
+};
+
+// Function to delete the last data entry
+function lastDel () {
     if (current.length != 0 ) {
         current = current.slice(0, -1);
         currentInputDisplay();
     } else {
         return;
     }
-};
+}
 
 // Function to calculate the output
 function calculate(prev, operator, curr) {
@@ -90,6 +104,7 @@ function calculationOutput (){
     previousInputDisplay();
     current = String(calculate(previous,operator,current));
     currentInputOutput.textContent = current;
+    isResult = true;
 }
 
 function reset() {
