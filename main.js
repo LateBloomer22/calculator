@@ -107,6 +107,7 @@ function calculationOutput (){
     isResult = true;
 }
 
+// Function to reset everything
 function reset() {
     operator = "";
     current = "";
@@ -114,4 +115,14 @@ function reset() {
     previousInputTillNow = "";
     previousInputDisplay();
     currentInputDisplay();
+}
+
+// Function to deal with 0
+function zero() {
+    if (current == "") {
+        return;
+    } else {
+        current += "0";
+        currentInputDisplay();
+    }
 }
