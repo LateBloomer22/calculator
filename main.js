@@ -11,11 +11,9 @@ window.onload = currentInputDisplay();
 
 // Function to get the operator input by the user
 function getOperator(button) {
-    // Case 1: Both values empty : Do nothing
     if (current == "" && previous == "") {
         return;
     } 
-    // Case 2: Previous empty and current non-empty : Assign current to previous, empty current, and output previous input till now
     else if (previous == "" && current != ""){
         operator = button.value;
         previous = current;
@@ -52,7 +50,6 @@ function currentInputDisplay(){
     else {
         currentInputOutput.textContent = "0";
     }
-    
 } 
 
 // Function to create the input number
@@ -65,7 +62,7 @@ function input(button) {
 function del() {
     if (current.length != 0 ) {
         current = current.slice(0, -1);
-    
+        currentInputDisplay();
     } else {
         return;
     }
