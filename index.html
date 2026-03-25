@@ -11,8 +11,15 @@
     <div class="container">
         <h1>My Calculator</h1>
         <div class="calculator">
-            <div class="display">Test display</div>
+            <div class="display">
+                <div class="runningDisplay">Current operation</div>
+                <div class="inputDisplay">Current input</div>
+            </div>
             <!-- TryOnclick property this time -->
+             <div class="aux">
+                <button type="button" class="reset">Clear</button>
+                <button type="button" class="delete">Delete</button>
+            </div>
              <div class="numbers">
                 <button type="button" class="input">1</button>
                 <button type="button" class="input">2</button>
@@ -23,12 +30,10 @@
                 <button type="button" class="input">7</button>
                 <button type="button" class="input">8</button>
                 <button type="button" class="input">9</button>
-            </div>
-            <div class="aux">
-                <button type="button" class="reset">Clear</button>
+                <button type="button" class="input">.</button>
                 <button type="button" class="input">0</button>
                 <button type="button" class="equal">=</button>
-            </div>
+                </div>
             <div class="procedures">
                 <button type="button" class="operator">+</button>
                 <button type="button" class="operator">&mdash;</button>
@@ -37,7 +42,7 @@
             </div>
         </div>
         <div class="footer">
-            &copy; LateBloomer22
+            Copyright &copy; LateBloomer22
         </div>
     </div>
 </body>
