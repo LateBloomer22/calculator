@@ -105,6 +105,7 @@ function calculationOutput (){
     current = String(calculate(previous,operator,current));
     currentInputOutput.textContent = current;
     isResult = true;
+    previous = "";
 }
 
 // Function to reset everything
@@ -118,11 +119,30 @@ function reset() {
 }
 
 // Function to deal with 0
-function zero() {
-    if (current == "") {
-        return;
-    } else {
-        current += "0";
-        currentInputDisplay();
-    }
-}
+// function zero() {
+//     if (isResult == false){
+//         if (current == "" && previous == "") {
+//         return;
+//     } else if (current == "" && previous != "" ){
+//         current += "0";
+//         currentInputDisplay();
+//         }
+//         else if (current == "0"){
+//             return;
+//         } else {
+//             current += "0";
+//             currentInputDisplay();
+//         }
+//     } 
+//     else  {
+//         previousInputTillNow = "";
+//         previousInputDisplay();
+//         if (current == "0") {
+//             return;
+//         } else {
+//             current += "0";
+//             currentInputDisplay();
+//         }
+//         isResult = false;
+//     }
+// }
